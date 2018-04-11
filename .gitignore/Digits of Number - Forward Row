@@ -1,5 +1,4 @@
 Module Cifre
-    REM Comparing elements of two array of colours to check which colour belongs to both arrays 
     Sub Main()
         Dim number, digit, divider, degree As Integer
         Dim str_number As String
