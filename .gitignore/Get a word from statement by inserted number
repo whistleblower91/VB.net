@@ -21,7 +21,7 @@ Module Module1
                 End If
             End If
         Next
-        If n > num Then
+        If n = 0 Or n > num  Then
             Console.WriteLine("Statement has {0} words!", num)
             Console.ReadKey()
             Exit Sub
