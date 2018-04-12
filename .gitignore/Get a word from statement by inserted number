@@ -2,29 +2,27 @@ Module Module1
 
     Sub Main()
         Dim myStr, rep As String
-        Dim n, fpos, lpos, i, num, sum As Integer
+        Dim n, fpos, lpos, i, num As Integer
         Console.WriteLine("Insert your statement here (only blank spaces) :")
         myStr = Console.ReadLine
         Console.WriteLine("Insert n:")
         n = Console.ReadLine
         num = 1 'First word 
-        sum = 1 'Sum of all words in sentence 
         For i = 0 To myStr.Length - 1
             If myStr(i) = " " Then
-                sum += 1
                 num += 1
                 If num = n Then
                     fpos = i + 1 'Remove first blank space
                 End If
                 If num = n + 1 Then
                     lpos = i
-                ElseIf n + 1 >= sum Then
+                ElseIf n + 1 >= num Then
                     lpos = myStr.Length
                 End If
             End If
         Next
-        If n > sum Then
-            Console.WriteLine("Statement has {0} words!", sum)
+        If n > num Then
+            Console.WriteLine("Statement has {0} words!", num)
             Console.ReadKey()
             Exit Sub
         End If
