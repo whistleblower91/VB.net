@@ -5,7 +5,7 @@ Module Module1
         Dim n, fpos, lpos, i, num As Integer
         Console.WriteLine("Insert your statement here (only blank spaces) :")
         myStr = Console.ReadLine
-        Console.WriteLine("Insert n:")
+        Console.WriteLine("Insert a word number by its row in statement::")
         n = Console.ReadLine
         num = 1 'First word 
         For i = 0 To myStr.Length - 1
