@@ -1,5 +1,5 @@
 Module ArrayComparing
-REM Comparing elements of two arrays to check which colour belongs to both arrays 
+REM Comparing elements of two arrays to check which colours belongs to both arrays 
     Sub Main()
         Dim colours1() As String = {"red", "blue", "black", "orange", "yellow", "pink", "grey"}
         Dim colours2() As String = {"brown", "white", "orange", "green", "red", "purple", "black"}
