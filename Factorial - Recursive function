@@ -14,5 +14,6 @@ Module Factorial
         Else
             Return num * Factorial(num - 1)
         End If
+         Return num
     End Function
 End Module
