@@ -2,7 +2,7 @@ Module CombineWords
 
     Sub Main()
         Dim str1, str2, word, myword, sum, outcome As String
-        Dim i, j, min, max, size As Integer
+        Dim i, j, min, max As Integer
         Console.WriteLine("Unesi prvi string:")
         str1 = Console.ReadLine
         Console.WriteLine("Unesi drugi string:")
@@ -21,9 +21,7 @@ Module CombineWords
             max = str2.Length
             word = str2
         End If
-        size = max - min
-        word = word.Substring(size, word.Length - size)
-
+        word = word.Substring(min, word.Length - min)
         While i <= str1.Length - 1 And j <= str2.Length - 1
             myword = str1(i) + str2(j)
             i += 1
