@@ -1,7 +1,7 @@
 Module CombineWords
 
     Sub Main()
-        Dim str1, str2, word, myword, sum, outcome As String
+        Dim str1, str2, word, sum, myword, outcome As String
         Dim i, j, min, max As Integer
         Console.WriteLine("Unesi prvi string:")
         str1 = Console.ReadLine
