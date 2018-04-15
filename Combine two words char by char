@@ -3,9 +3,9 @@ Module CombineWords
     Sub Main()
         Dim str1, str2, word, sum, myword, outcome As String
         Dim i, j, min, max As Integer
-        Console.WriteLine("Unesi prvi string:")
+        Console.WriteLine("Insert first string:")
         str1 = Console.ReadLine
-        Console.WriteLine("Unesi drugi string:")
+        Console.WriteLine("Insert second string:")
         str2 = Console.ReadLine
         word = ""
         sum = ""
