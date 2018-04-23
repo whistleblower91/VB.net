@@ -14,7 +14,7 @@ Module Module1
             sum += res
             num = Conversion.Int(num \ 10)
         End While
-
+        
         If sum = n Then
             Console.WriteLine("The number is Armstrong Number!")
         Else
