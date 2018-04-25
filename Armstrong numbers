@@ -1,28 +1,23 @@
 Imports System.IO
-Module Module1
-
+Module Armstrong
     Sub Main()
-        Dim num, n, sum, digit, res As Integer
+        Dim number, res As Integer
         Console.WriteLine("Insert number:")
-        num = Console.ReadLine
-        n = num
-        sum = 0
-
-        While num <> 0
-            digit = num Mod 10
-            res = Math.Pow(digit, 3)
-            sum += res
-            num = Conversion.Int(num \ 10)
-        End While
-        
-        If sum = n Then
-            Console.WriteLine("The number is Armstrong Number!")
+        number = Console.ReadLine
+        res = Armstrong(number)
+        If res = number Then
+            Console.WriteLine("The number {0} is Armstrong number!", res)
         Else
-            Console.WriteLine("Not Armstrong number")
+            Console.WriteLine("The number is not Armstrong number!")
         End If
-
         Console.ReadLine()
     End Sub
+    
+    'Writing recursive function which checks if inserted number is Armstrong number or not:
+    Private Function Armstrong(ByVal num As Integer) As Integer
+        If num Then
+            Return Math.Pow(num Mod 10, 3) + Armstrong(Conversion.Int(num \ 10))
+        End If
+        Return num
+    End Function
 End Module
-
-
