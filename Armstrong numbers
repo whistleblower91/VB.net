@@ -5,7 +5,7 @@ Module Armstrong
         Console.WriteLine("Insert number:")
         number = Console.ReadLine
         res = Armstrong(number)
-        If res = number Then
+        If number = res Then
             Console.WriteLine("The number {0} is Armstrong number!", res)
         Else
             Console.WriteLine("The number is not Armstrong number!")
@@ -13,7 +13,7 @@ Module Armstrong
         Console.ReadLine()
     End Sub
     
-    'Writing recursive function which checks if inserted number is Armstrong number or not:
+    'Writing recursive function to check if inserted number is Armstrong number or not:
     Private Function Armstrong(ByVal num As Integer) As Integer
         If num Then
             Return Math.Pow(num Mod 10, 3) + Armstrong(Conversion.Int(num \ 10))
