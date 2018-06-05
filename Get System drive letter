@@ -1,0 +1,16 @@
+Imports System.IO
+
+Module Module1
+    'Since DriveInfo class can only provide drive informations of Fixed,Removable,Network and CD-ROM drives without specific System drive,
+    'there is alternate way to find it:
+    Sub Main()
+        Dim sysdrive As String = Directory.GetDirectoryRoot(Environment.SpecialFolder.Windows)
+        Dim drive As DriveInfo
+
+        For Each drive In DriveInfo.GetDrives
+            If drive.DriveType = 3 And drive.Name = sysdrive Then
+                MsgBox("System drive letter in your system is: " + drive.Name)
+            End If
+        Next
+    End Sub
+End Module
