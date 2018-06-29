@@ -1,0 +1,35 @@
+Imports System.IO
+Module Module1
+'This program returns the letter of a drive with more free space avaliable than the other
+    Sub Main()
+        Dim check As String = LargerDrive()
+        MsgBox(check)
+    End Sub
+    Private Function LargerDrive() As String
+            Dim system, fixed, larger As String
+            Dim sys_size, fix_size As Long
+            Dim drive As DriveInfo
+
+            system = Directory.GetDirectoryRoot(Environment.SpecialFolder.Windows)
+            sys_size = fix_size = 0
+            fixed = ""
+        For Each drive In DriveInfo.GetDrives
+            'Get system drive total free space first: 
+            If drive.DriveType = 3 And drive.Name = system Then
+                sys_size += drive.TotalFreeSpace
+                'Then add fixed drive letter to 'fixed' variable and take its total free space:
+            ElseIf drive.DriveType = 3 And drive.Name <> system Then
+                fixed = drive.Name
+                fix_size += drive.TotalFreeSpace
+            End If
+        Next
+        'Now check which drive has more free avaliable space and return its drive letter:
+        larger = ""
+        If sys_size > fix_size Then
+                larger = system
+            ElseIf fix_size > sys_size Then
+                larger = fixed
+            End If
+            Return larger
+        End Function
+End Module
