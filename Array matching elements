@@ -1,9 +1,11 @@
 Module ArrayComparing
-REM Comparing elements of two arrays to check which colours belongs to both arrays 
+'Comparing elements of two arrays to check which colours belongs to both arrays 
     Sub Main()
-        Dim colours1() As String = {"red", "blue", "black", "orange", "yellow", "pink", "grey"}
-        Dim colours2() As String = {"brown", "white", "orange", "green", "red", "purple", "black"}
-        Dim i, j As Integer, match As String
+        Dim colours1(),colours2(),match As String
+        Dim i, j As Integer
+        
+        colours1 = {"red", "blue", "black", "orange", "yellow", "pink", "grey"}
+        colours2 = {"brown", "white", "orange", "green", "red", "purple", "black"}
 
         i = 0
         While i <= colours2.Length - 1
