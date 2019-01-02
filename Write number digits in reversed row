@@ -1,0 +1,15 @@
+Module Module1
+    Sub Main()
+        'Common school assignment in begginer programming
+        Dim number, digit, divide As Integer
+        Console.WriteLine("Insert number:")
+        number = Console.ReadLine()
+        Do Until number = 0
+            divide = number \ 10
+            digit = number Mod 10
+            number = Conversion.Int(divide)
+            Console.Write("{0}", digit & ",")
+        Loop
+        Console.ReadKey()
+    End Sub
+End Module
