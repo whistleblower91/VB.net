@@ -1,4 +1,4 @@
-Module Factorial
+Module Module1
     Sub Main()
         Dim number As String, fact As Integer
         Console.WriteLine("Insert number for factoriel:")
