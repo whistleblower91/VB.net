@@ -2,11 +2,12 @@ Imports System.IO
 Module Module1
     Sub Main()
         Dim filename, ext As String
-        Console.WriteLine("Insert a filename you want to find:")
+        Console.WriteLine("Insert a folder:")
         filename = Console.ReadLine()
         Console.WriteLine("Insert a file extension (in format *.file):")
         ext = Console.ReadLine()
         Research(filename, ext)
+        Console.WriteLine("Done!")
         Console.ReadKey()
     End Sub
     Public Sub Research(ByVal sDir As String, ByVal ex As String)
