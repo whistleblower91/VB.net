@@ -29,7 +29,7 @@ Module Module1
         Next
         'Since the starting position is 1,if the inserted position is 0 or greater than number of words in statement,alert: 
         If n = 0 Or n > num Then
-            Console.WriteLine("Statement has more or less words then the position you require!", num)
+            Console.WriteLine("Statement has more or less words then the position you require!")
             Console.ReadKey()
             Exit Sub
         End If
