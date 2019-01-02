@@ -1,5 +1,4 @@
-Imports System.IO
-Module Armstrong
+Module Module1
     Sub Main()
         Dim number, res As Integer
         Console.WriteLine("Insert number:")
@@ -12,9 +11,8 @@ Module Armstrong
         End If
         Console.ReadLine()
     End Sub
-    
-    'Writing recursive function to check if inserted number is Armstrong number or not:
-    Private Function Armstrong(ByVal num As Integer) As Integer
+    Function Armstrong(ByVal num As Integer) As Integer
+        'Writing recursive function to check if inserted number is Armstrong number or not:
         If num Then
             Return Math.Pow(num Mod 10, 3) + Armstrong(Conversion.Int(num \ 10))
         End If
