@@ -1,19 +1,13 @@
-Module Digits
+Module Module1
     Sub Main()
-        Dim number, digit, divider, degree As Integer
-        Dim str_number As String
-        Console.WriteLine("Insert your number:")
-        number = Console.ReadLine
-        str_number = number.ToString
-        degree = str_number.Length - 1
-
-        While (degree >= 0)
-            divider = Math.Pow(10, degree)
-            digit = Conversion.Int(number \ divider)
-            Console.Write("{0}", digit & ",")
-            number = number Mod divider
-            degree -= 1
-        End While
+        Dim num As Integer
+        Dim str As String
+        Console.WriteLine("Insert number:")
+        num = Console.ReadLine()
+        str = num.ToString
+        For Each n As String In str
+            Console.Write(n & " ")
+        Next
         Console.ReadKey()
     End Sub
 End Module
