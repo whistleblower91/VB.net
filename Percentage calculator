@@ -1,0 +1,13 @@
+Module Module1
+    Sub Main()
+        Dim num As Long
+        Dim per, res As Integer
+        Console.WriteLine("Insert number:")
+        num = Console.ReadLine()
+        Console.WriteLine("Insert percentage:")
+        res = 0
+        per = Console.ReadLine()
+        res = num * per \ Math.Pow(10, 2)
+        MsgBox(res)
+    End Sub
+End Module
