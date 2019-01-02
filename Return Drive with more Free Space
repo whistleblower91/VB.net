@@ -2,7 +2,7 @@ Imports System.IO
 Module Module1
     Sub Main()
         Dim drivename As String = LargerDrive()
-        MsgBox("The fixed drive with the most free space avaliable is: " & drivename)
+        MsgBox("The fixed drive with the most free space avaliable is " & drivename)
     End Sub
     Public Function LargerDrive() As String
         Dim drive As DriveInfo
