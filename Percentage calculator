@@ -5,9 +5,9 @@ Module Module1
         Console.WriteLine("Insert number:")
         num = Console.ReadLine()
         Console.WriteLine("Insert percentage:")
-        res = 0
         per = Console.ReadLine()
         res = num * per \ Math.Pow(10, 2)
-        MsgBox(res)
+        Console.WriteLine("Percentage: {0}",res)
+        Console.ReadKey()
     End Sub
 End Module
