@@ -5,7 +5,7 @@ Module Module1
         Dim number, num, digit, degree, d, divider As Integer
         Console.WriteLine("Insert number:")
         number = Console.ReadLine()
-        num = number 'Store number variable to num to save the value after the loop
+        num = number 'Store number variable to num to save the value after looping
         degree = 0
         Do Until number = 0
             number = number \ 10
