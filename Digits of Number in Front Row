@@ -1,13 +1,25 @@
 Module Module1
     Sub Main()
-        Dim num As Integer
-        Dim str As String
+        'Print digits of a number in front order 
+        Const multiplier As Integer = 10
+        Dim number, num, digit, degree, d, divider As Integer
         Console.WriteLine("Insert number:")
-        num = Console.ReadLine()
-        str = num.ToString
-        For Each n As String In str
-            Console.Write(n & " ")
-        Next
+        number = Console.ReadLine()
+        num = number 'Store number variable to num to save the value after the loop
+        degree = 0
+        Do Until number = 0
+            number = number \ 10
+            Conversion.Int(number)
+            degree = degree + 1
+        Loop
+        d = degree - 1
+        While d >= 0
+            divider = Math.Pow(multiplier, d)
+            digit = Conversion.Int(num \ divider)
+            Console.Write("{0}", digit & ",")
+            num = num Mod divider
+            d = d - 1
+        End While
         Console.ReadKey()
     End Sub
 End Module
