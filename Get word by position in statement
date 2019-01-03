@@ -1,5 +1,6 @@
 Module Module1
     Sub Main()
+        'Avaliable separators: ',','.',' '
         Dim myStr, rep As String
         Dim n, fpos, lpos, i, num As Integer
         Console.WriteLine("Insert your statement here (only blank spaces) :")
@@ -13,7 +14,7 @@ Module Module1
         n = Console.ReadLine
         num = 1 'First word 
         For i = 0 To myStr.Length - 1
-            If myStr(i) = " " Then
+            If myStr(i) = " " Or myStr(i) = "," Or myStr(i) = "." Then
                 num += 1
                 'Remove first blank space and set begin position of a word:
                 If num = n Then
