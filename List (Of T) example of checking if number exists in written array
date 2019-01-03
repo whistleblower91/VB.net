@@ -1,0 +1,28 @@
+Module Module1
+    'Checking if inserted number belongs to array of numbers\elements (using List(Of T)) 
+    Sub Main()
+        Const len As Integer = 5
+        Dim arr As New List(Of Integer)
+        Dim i, n, num, j As Integer
+        Dim ok As Boolean
+        ok = False
+        For i = 1 To len
+            Console.WriteLine("Insert element:")
+            n = Console.ReadLine()
+            arr.Add(n)
+        Next
+        Console.WriteLine("Insert number:")
+        num = Console.ReadLine()
+        For Each j In arr
+            If num = j Then
+                ok = True
+            End If
+        Next
+        If ok Then
+            Console.WriteLine("Number exists in array of elements")
+        Else
+            Console.WriteLine("Number does not exist in array of elements")
+        End If
+        Console.ReadKey()
+    End Sub
+End Module
