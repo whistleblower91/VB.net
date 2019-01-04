@@ -3,14 +3,14 @@ Module Module1
         'Avaliable separators: ',','.',' '
         Dim myStr, rep As String
         Dim n, fpos, lpos, i, num As Integer
-        Console.WriteLine("Insert your statement here (only blank spaces) :")
+        Console.WriteLine("Insert your statement here:")
         myStr = Console.ReadLine
         If myStr = "" Then
-            Console.WriteLine("You didn't write anything!")
+            Console.WriteLine("You didn't wrote anything!")
             Console.ReadKey()
             Exit Sub
         End If
-        Console.WriteLine("Insert a word number by its row in statement::")
+        Console.WriteLine("Insert a word number by its row in statement:")
         n = Console.ReadLine
         num = 1 'First word 
         For i = 0 To myStr.Length - 1
