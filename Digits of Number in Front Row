@@ -1,6 +1,6 @@
 Module Module1
     Sub Main()
-        'Print digits of a number in front order 
+        'Print digits of a number in front order - in mathematical way
         Const multiplier As Integer = 10
         Dim number, num, digit, degree, d, divider As Integer
         Console.WriteLine("Insert number:")
