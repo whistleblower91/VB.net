@@ -1,9 +1,7 @@
 Imports System.Threading
 Module Module1
     Sub Main()
-        'Caladont is Serbian - Croatian game which requires at least two players.
-        'The first one says the word,then the other(s) have to say new word which must start with last 2 letters of the word first player said
-        'If the words ends with 'ka' or 'nt',the next player loses round or game.The word also must not contain less than 3 letters! 
+        'Caladont is Serbian - Croatian game which requires at least two players.The first one says the word,then the other(s) have to say new word which must start with last 2 letters of the word first player said:
         Kaladont()
     End Sub
     Sub Kaladont()
@@ -18,9 +16,7 @@ Module Module1
             list.Add(word)
             If LastTwo(word) = "ka" Or LastTwo(word) = "nt" Then
                 Console.WriteLine("KALADONT!")
-                Thread.Sleep(2000)
-                Console.Clear()
-                Kaladont()
+                ok = False
             End If
             If word.Length < 3 Then
                 ok = False
