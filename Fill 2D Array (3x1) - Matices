@@ -1,0 +1,28 @@
+Module Module1
+    Sub Main()
+        You can use this program to name 4 member family with name in first and last name in 2nd row:
+        Dim noviniz = New String(,) {{"", ""}, {"", ""}, {"", ""}, {"", ""}}
+        Dim p1, p2, i, j, p, k As Integer
+        Dim str As String
+        p1 = noviniz.GetUpperBound(0)
+        p2 = noviniz.GetUpperBound(1)
+        'Add elements to array:
+        For i = 0 To p1
+            For j = 0 To p2
+                Console.Write("Name \ Surname:")
+                noviniz(i, j) = Console.ReadLine()
+            Next
+            Console.WriteLine()
+        Next
+        'Walk through array and read:
+        For p = 0 To p1
+            For k = 0 To p2
+                str = noviniz(p, k)
+                Console.Write(str)
+                Console.Write(" "c)
+            Next
+            Console.WriteLine()
+        Next
+        Console.ReadKey()
+    End Sub
+End Module
