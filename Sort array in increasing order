@@ -1,0 +1,32 @@
+Module Module1
+    'The reason I'm using While loop,is to simplify the code.When the array element is set to 0 in While array,it remains so until we 
+    'make iteration though increase of counting variable (in this case i).Unlike While,For loop will immediately loop throughout all of 
+    'its elements.So what we have now,is that we're comparing variable 0 to 1,2,3,4,5,then 1 to 2,3,4,5,then 3 to 4,5,etc.,and each largerst
+    'element will replace the smaller one in one counting cyclus.
+    Sub Main()
+        Dim arr As New List(Of Integer)
+        Dim dm, k, input, i, j, pom As Integer
+        Console.WriteLine("Insert dimension array:")
+        dm = Console.ReadLine()
+        For k = 1 To dm
+            Console.Write("Input:")
+            input = Console.ReadLine()
+            arr.Add(input)
+        Next
+        i = 0
+        While i < dm
+            For j = i + 1 To dm - 1
+                If arr(i) > arr(j) Then
+                    pom = arr(i)
+                    arr(i) = arr(j)
+                    arr(j) = pom
+                End If
+            Next
+            i = i + 1
+        End While
+        For Each sl As Integer In arr
+            Console.Write(sl & ",")
+        Next
+        Console.ReadKey()
+    End Sub
+End Module
