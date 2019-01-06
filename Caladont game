@@ -4,6 +4,7 @@ Module Module1
         Kaladont()
     End Sub
     Sub Kaladont()
+        Const msg As String = "You've lost!" 
         Dim list As New List(Of String)
         Dim word As String
         Dim i As Integer
@@ -17,20 +18,20 @@ Module Module1
                 Console.WriteLine("KALADONT! You won!")
                 ok = False
             ElseIf word.Length < 3 Then
-                Console.WriteLine("You've lost!")
+                Console.WriteLine(msg)
                 ok = False
             End If
             If list.Count > 1 Then 'Skip checking first word
                 For i = 0 To list.Count - 2
                     If word.ToLower.CompareTo(list(i).ToLower) = 0 Then
-                        Console.WriteLine("You've lost!")
+                        Console.WriteLine(msg)
                         ok = False
                     End If
                 Next
                 If FirstTwo(list.Last) = LastTwo(list(list.Count - 2)) Then
                     Continue While
                 Else
-                    Console.WriteLine("You've lost!")
+                    Console.WriteLine(msg)
                     ok = False
                 End If
             End If
