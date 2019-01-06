@@ -1,4 +1,3 @@
-Imports System.Threading
 Module Module1
     Sub Main()
         'Caladont is Serbian - Croatian game which requires at least two players.The first one says the word,then the other(s) have to say new word which must start with last 2 letters of the word first player said:
@@ -11,25 +10,27 @@ Module Module1
         Dim ok As Boolean
         ok = True
         While ok
-            Console.Write("Input word:")
+            Console.Write("Insert word:")
             word = Console.ReadLine()
             list.Add(word)
             If LastTwo(word) = "ka" Or LastTwo(word) = "nt" Then
-                Console.WriteLine("KALADONT!")
+                Console.WriteLine("KALADONT! You won!")
                 ok = False
-            End If
-            If word.Length < 3 Then
+            ElseIf word.Length < 3 Then
+                Console.WriteLine("You've lost!")
                 ok = False
             End If
             If list.Count > 1 Then 'Skip checking first word
                 For i = 0 To list.Count - 2
                     If word.ToLower.CompareTo(list(i).ToLower) = 0 Then
+                        Console.WriteLine("You've lost!")
                         ok = False
                     End If
                 Next
                 If FirstTwo(list.Last) = LastTwo(list(list.Count - 2)) Then
                     Continue While
                 Else
+                    Console.WriteLine("You've lost!")
                     ok = False
                 End If
             End If
@@ -44,7 +45,7 @@ Module Module1
     End Function
     Sub Check()
         Dim sign As Char
-        Console.WriteLine("You've lost! Do you want to start new game? y\n")
+        Console.WriteLine("Do you want to start new game? y\n")
         sign = Console.ReadLine()
         If sign = CChar("y") Then
             Console.Clear()
