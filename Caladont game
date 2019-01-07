@@ -1,5 +1,8 @@
 Module Module1
     Sub Main()
+        'Type a word and the first two letters of the next one has to begin with last 2 letters of previous
+        'If last 2 letters contains letters "ka" or "nt",the player with that word won
+        'Word must not be repeated nor be empty or contain less than 3 letters
         Kaladont()
     End Sub
     Sub Kaladont()
