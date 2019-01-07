@@ -7,8 +7,7 @@ Module Module1
         Dim list As New List(Of String)
         Dim word As String
         Dim i As Integer
-        Dim ok As Boolean
-        ok = True
+        Dim ok As Boolean = True
         While ok
             Console.Write("Insert word:")
             word = Console.ReadLine()
@@ -16,8 +15,7 @@ Module Module1
             If word.Length < 3 Or word = "" Then
                 Console.WriteLine(msg)
                 ok = False
-            End If
-            If list.Count > 1 Then 'Skip checking first word
+            ElseIf list.Count > 1 Then 'Skip checking first word
                 For i = 0 To list.Count - 2
                     If word.ToLower = list(i).ToLower Then
                         Console.WriteLine(msg)
