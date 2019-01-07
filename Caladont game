@@ -17,7 +17,8 @@ Module Module1
             If LastTwo(word) = "ka" Or LastTwo(word) = "nt" Then
                 Console.WriteLine("KALADONT! You won!")
                 ok = False
-            ElseIf word.Length < 3 Then
+            End If 
+            If word.Length < 3 Then
                 Console.WriteLine(msg)
                 ok = False
             End If
