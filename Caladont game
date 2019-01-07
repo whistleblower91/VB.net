@@ -3,7 +3,7 @@ Module Module1
         Kaladont()
     End Sub
     Sub Kaladont()
-        Const msg As String = "You've lost!" 
+        Const msg As String = "You've lost!"
         Dim list As New List(Of String)
         Dim word As String
         Dim i As Integer
@@ -13,21 +13,21 @@ Module Module1
             Console.Write("Insert word:")
             word = Console.ReadLine()
             list.Add(word)
-            If LastTwo(word) = "ka" Or LastTwo(word) = "nt" Then
-                Console.WriteLine("KALADONT! You won!")
-                ok = False
-            End If 
             If word.Length < 3 Or word = "" Then
                 Console.WriteLine(msg)
                 ok = False
             End If
             If list.Count > 1 Then 'Skip checking first word
                 For i = 0 To list.Count - 2
-                    If word.ToLower = lista(i).ToLower Then
+                    If word.ToLower = list(i).ToLower Then
                         Console.WriteLine(msg)
                         ok = False
                     End If
                 Next
+                If LastTwo(word) = "ka" Or LastTwo(word) = "nt" Then
+                    Console.WriteLine("KALADONT! You won!")
+                    ok = False
+                End If
                 If FirstTwo(list.Last) <> LastTwo(list(list.Count - 2)) Then
                     Console.WriteLine(msg)
                     ok = False
