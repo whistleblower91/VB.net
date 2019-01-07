@@ -1,6 +1,5 @@
 Module Module1
     Sub Main()
-        'Caladont is Serbian - Croatian game which requires at least two players.The first one says the word,then the other(s) have to say new word which must start with last 2 letters of the word first player said:
         Kaladont()
     End Sub
     Sub Kaladont()
@@ -18,20 +17,18 @@ Module Module1
                 Console.WriteLine("KALADONT! You won!")
                 ok = False
             End If 
-            If word.Length < 3 Then
+            If word.Length < 3 Or word = "" Then
                 Console.WriteLine(msg)
                 ok = False
             End If
             If list.Count > 1 Then 'Skip checking first word
                 For i = 0 To list.Count - 2
-                    If word.ToLower.CompareTo(list(i).ToLower) = 0 Then
+                    If word.ToLower = lista(i).ToLower Then
                         Console.WriteLine(msg)
                         ok = False
                     End If
                 Next
-                If FirstTwo(list.Last) = LastTwo(list(list.Count - 2)) Then
-                    Continue While
-                Else
+                If FirstTwo(list.Last) <> LastTwo(list(list.Count - 2)) Then
                     Console.WriteLine(msg)
                     ok = False
                 End If
