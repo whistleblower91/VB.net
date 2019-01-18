@@ -1,7 +1,7 @@
 Module Module1
     'The reason I'm using While loop,is to simplify the code.When the array element is set to 0 in While array,it remains so until we 
-    'make iteration though increase of counting variable (in this case i).Unlike While,For loop will immediately loop throughout all of 
-    'its elements.So what we have now,is that we're comparing variable 0 to 1,2,3,4,5,then 1 to 2,3,4,5,then 3 to 4,5,etc.,and each largerst
+    'make iteration through increasing counting variable (in this case i).Unlike While,For loop will immediately loop throughout all of 
+    'its elements.So what we have now,is that we're comparing variable 0 to 1,2,3,4,5,then 1 to 2,3,4,5,then 2 to 3,4,5,etc.,and each largerst
     'element will replace the smaller one in one counting cyclus.
     Sub Main()
         Dim arr As New List(Of Integer)
